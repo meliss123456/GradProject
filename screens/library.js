@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-export default function Home() {
-  return <View></View>;
+export default function Library() {
+  return (<View>
+    <Text style={{fontSize:38}}>서재</Text>
+  </View>);
 }

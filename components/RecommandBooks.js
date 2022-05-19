@@ -74,11 +74,10 @@ export default function ImageCarousel(props) {
 const styles = StyleSheet.create({
   container: { paddingVertical: 25 },
   carousel: {
-    aspectRatio: 1,
+    aspectRatio: 1.8,
     flexGrow: 0,
     marginBottom: 20,
     marginTop: 5,
-    height: windowWidth * 0.5,
   },
   item: {
     flex: 1,
