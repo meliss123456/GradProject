@@ -7,10 +7,23 @@ import {
   Button,
   Image,
 } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+
+//Components
+import LibraryBar from '../components/LibraryBar';
 
 export default function Library() {
-  return (<View>
-    <Text style={{fontSize:38}}>서재</Text>
-  </View>);
+  return (
+    <View>
+      <ScrollView>
+        <LibraryBar />
+      </ScrollView>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    fontWeight: 400,
+  },
+});
