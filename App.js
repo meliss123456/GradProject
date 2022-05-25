@@ -19,7 +19,7 @@ export default function App() {
     </View>
   );
 }
-// dlrjdlrj이거이거
+// 이거롤 다시 보내봐
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: 'f4f2ed' },
   intro: { marginTop: 100, alignItems: 'center' },
