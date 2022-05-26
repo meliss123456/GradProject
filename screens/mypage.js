@@ -9,22 +9,21 @@ import {
 } from 'react-native';
 
 //Components
-import ProfileDetail from '../components/ProfileDetail';
+import MypageBarDetail from '../components/MypageBarDetail';
 
 export default function Profile() {
   return (
-  <View>
-    <ScrollView>
-      <ProfileDetail/>
-    </ScrollView>
-  </View>);
+    <View>
+      <ScrollView>
+        <MypageBarDetail />
+      </ScrollView>
+    </View>
+  );
 }
 
-
 const styles = StyleSheet.create({
-  title:{
-    fontSize:20,
-    fontWeight:400,
-
-  }
-})
+  title: {
+    fontSize: 20,
+    fontWeight: 400,
+  },
+});

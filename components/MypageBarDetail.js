@@ -10,19 +10,19 @@ import {
 } from 'react-native';
 import SwitchSelector from 'react-native-switch-selector';
 
-import BookLists from '../components/BookLists';
-import BookReports from '../components/BookReports';
-import Calenders from '../components/Calendars';
-import FavoriteReports from '../components/FavoriteReport';
+import MyInfo from './MyInfo';
+import FriendsList from './FriendsList';
+import BorrowBooks from './BorrowBooks';
+import Settings from './Settings';
 
 const options = [
-  { label: '책 목록', value: '1' },
-  { label: '독서록', value: '2' },
-  { label: '달력', value: '3' },
-  { label: '취향분석', value: '4' },
+  { label: '내 정보', value: '1' },
+  { label: '친구목록', value: '2' },
+  { label: '빌려준 책 목록', value: '3' },
+  { label: '설정', value: '4' },
 ];
 
-export default function LibraryBarDetail() {
+export default function MypageBarDetail() {
   const [pagenum, setPageNum] = useState('1');
 
   function functionCombined(value) {
@@ -32,7 +32,7 @@ export default function LibraryBarDetail() {
 
   return (
     <View style={styles.rootContainer}>
-      <Text style={styles.title}>서재</Text>
+      <Text style={styles.title}>마이페이지</Text>
       <SwitchSelector
         options={options}
         initial={0}
@@ -42,10 +42,10 @@ export default function LibraryBarDetail() {
         height={35}
         style={styles.button}
       />
-      {pagenum === '1' && <BookLists></BookLists>}
-      {pagenum === '2' && <BookReports></BookReports>}
-      {pagenum === '3' && <Calenders></Calenders>}
-      {pagenum === '4' && <FavoriteReports></FavoriteReports>}
+      {pagenum === '1' && <MyInfo></MyInfo>}
+      {pagenum === '2' && <FriendsList></FriendsList>}
+      {pagenum === '3' && <BorrowBooks></BorrowBooks>}
+      {pagenum === '4' && <Settings></Settings>}
     </View>
   );
 }
