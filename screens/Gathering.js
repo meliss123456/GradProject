@@ -6,29 +6,24 @@ import {
   ScrollView,
   Button,
   Image,
+  Dimensions,
 } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-
-
-//Components
 import GatheringDetail from '../components/GatheringDetail';
-import GroupDetail from '../components/GroupDetail';
-import Gathernow from '../components/Gathernow';
 
-
-
-
+const screenHeight = Dimensions.get('screen').height;
 export default function Gathering() {
-  return(
-    <View>
+  return (
+    <View style={{ height: screenHeight }}>
       <ScrollView>
-        <GatheringDetail/>
-        <Gathernow/>
-// 스와이프..
-      
-        <GroupDetail/>
+        <GatheringDetail />
       </ScrollView>
-    </View>);
+    </View>
+  );
 }
 
-
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    fontWeight: 400,
+  },
+});
